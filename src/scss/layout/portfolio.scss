@@ -1,0 +1,106 @@
+.portfolio {
+  // .portfolio__grid
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(24);
+
+    @include media(991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(575) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Кейс ------------------------------------------------------------------------
+.case {
+  position: relative;
+  border-radius: $mainRadius;
+  overflow: hidden;
+  border: rem(1) solid $surfaceBorder;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+
+  // .case__media
+  &__media {
+    position: absolute;
+    inset: 0;
+    transition: transform 600ms ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(11, 11, 15, 0.92) 100%);
+    }
+
+    &--1 { background: linear-gradient(135deg, #1e3a8a, #4f8bff); }
+    &--2 { background: linear-gradient(135deg, #6d28d9, #a855f7); }
+    &--3 { background: linear-gradient(135deg, #0e7490, #22d3ee); }
+    &--4 { background: linear-gradient(135deg, #be185d, #fb7185); }
+    &--5 { background: linear-gradient(135deg, #4f46e5, #818cf8); }
+    &--6 { background: linear-gradient(135deg, #047857, #34d399); }
+  }
+
+  // .case__overlay
+  &__overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 1;
+    padding: rem(26);
+    transform: translateY(rem(14));
+    transition: transform 400ms ease;
+  }
+
+  // .case__tag
+  &__tag {
+    display: inline-block;
+    margin-bottom: rem(12);
+    padding: rem(5) rem(12);
+    border-radius: rem(999);
+    font-size: rem(12);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $whiteColor;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(8px);
+  }
+
+  // .case__title
+  &__title {
+    font-size: rem(22);
+    font-weight: 700;
+    color: $whiteColor;
+  }
+
+  // .case__text
+  &__text {
+    margin-top: rem(6);
+    font-size: rem(14);
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transform: translateY(rem(8));
+    transition: $standartTrans;
+  }
+
+  &:hover {
+    border-color: rgba(79, 139, 255, 0.5);
+
+    .case__media {
+      transform: scale(1.06);
+    }
+
+    .case__overlay {
+      transform: translateY(0);
+    }
+
+    .case__text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

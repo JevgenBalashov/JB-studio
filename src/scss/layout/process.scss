@@ -1,0 +1,55 @@
+.process {
+  // .process__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(24);
+
+    @include media(991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(479) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Шаг -------------------------------------------------------------------------
+.step {
+  position: relative;
+  padding: rem(32) rem(26);
+  border-radius: $mainRadius;
+  background: $surfaceColor;
+  border: rem(1) solid $surfaceBorder;
+  transition: $standartTrans;
+
+  &:hover {
+    border-color: rgba(168, 85, 247, 0.4);
+    transform: translateY(rem(-6));
+  }
+
+  // .step__num
+  &__num {
+    @include textGradient($mainGradient);
+    display: block;
+    font-size: rem(44);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: rem(18);
+  }
+
+  // .step__title
+  &__title {
+    font-size: rem(19);
+    font-weight: 700;
+    margin-bottom: rem(10);
+  }
+
+  // .step__text
+  &__text {
+    font-size: rem(15);
+    line-height: 1.6;
+    color: $mutedColor;
+  }
+}

@@ -1,62 +1,256 @@
-// =====================================================================================================================
-.header {
-  width: 100%;
-  &.sticky {
-    // ..стили для липкого хедера
+// Логотип ---------------------------------------------------------------------
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(10);
+  font-weight: 700;
+  font-size: rem(20);
+  color: $whiteColor;
+
+  // .logo__mark
+  &__mark {
+    width: rem(28);
+    height: rem(28);
+    border-radius: rem(8);
+    background: $mainGradient;
+    box-shadow: $btnGlow;
   }
+
+  &__text {
+    letter-spacing: -0.02em;
+  }
+}
+
+// Шапка -----------------------------------------------------------------------
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: $standartTrans;
+
   // .header__container
   &__container {
     height: rem($headerHeight);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: rem(24);
+  }
+
+  // Фон при скролле
+  &.sticky {
+    background: rgba(11, 11, 15, 0.72);
+    backdrop-filter: blur(16px);
+    border-bottom: rem(1) solid $surfaceBorder;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+  }
+
+  &__cta {
+    @include media(991) {
+      display: none;
+    }
   }
 }
-// =====================================================================================================================
 
-// Burger
-/*
+// Меню ------------------------------------------------------------------------
+.menu {
+  // .menu__list
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: rem(34);
+  }
+
+  // .menu__link
+  &__link {
+    position: relative;
+    font-size: rem(15);
+    font-weight: 500;
+    color: $mutedColor;
+    transition: $standartTrans;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: rem(-6);
+      width: 0;
+      height: rem(2);
+      border-radius: rem(2);
+      background: $mainGradient;
+      transition: width 280ms ease;
+    }
+
+    &:hover {
+      color: $whiteColor;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media(991) {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(11, 11, 15, 0.96);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(rem(-12));
+    transition: $standartTrans;
+
+    &__list {
+      flex-direction: column;
+      gap: rem(28);
+    }
+
+    &__link {
+      font-size: rem(24);
+      color: $whiteColor;
+    }
+
+    .menu-open & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+// Переключатель языков --------------------------------------------------------
+.lang {
+  position: relative;
+
+  // .lang__current
+  &__current {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(7);
+    padding: rem(9) rem(14);
+    border-radius: rem(999);
+    font-size: rem(14);
+    font-weight: 600;
+    color: $textColor;
+    background: $surfaceColor;
+    border: rem(1) solid $surfaceBorder;
+    transition: $standartTrans;
+
+    &:hover {
+      border-color: rgba(79, 139, 255, 0.5);
+    }
+  }
+
+  &__chevron {
+    transition: transform 280ms ease;
+  }
+
+  // .lang__list
+  &__list {
+    position: absolute;
+    top: calc(100% + #{rem(10)});
+    right: 0;
+    min-width: rem(160);
+    padding: rem(8);
+    border-radius: $mainRadius;
+    background: $bgElevated;
+    border: rem(1) solid $surfaceBorder;
+    box-shadow: $cardShadow;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(rem(-8));
+    transition: $standartTrans;
+    z-index: 10;
+  }
+
+  &__option {
+    display: block;
+    width: 100%;
+    padding: rem(10) rem(14);
+    border-radius: rem(10);
+    text-align: left;
+    font-size: rem(14);
+    font-weight: 500;
+    color: $mutedColor;
+    background: transparent;
+    transition: $standartTrans;
+
+    &:hover {
+      color: $whiteColor;
+      background: $surfaceColor;
+    }
+
+    &.is-active {
+      color: $whiteColor;
+      background: $softGradient;
+    }
+  }
+
+  // Открытое состояние
+  &.is-open {
+    .lang__chevron {
+      transform: rotate(180deg);
+    }
+
+    .lang__list {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+// Бургер ----------------------------------------------------------------------
 .icon-menu {
   display: none;
-  @include media(767) {
+
+  @include media(991) {
     display: block;
     position: relative;
-    width: rem(30);
+    width: rem(28);
     height: rem(18);
-    cursor: pointer;
-    z-index: 5;
+    background: transparent;
+    z-index: 110;
+
     span,
     &::before,
     &::after {
-      content: "";
-      transition: all 300ms ease 0ms;
-      right: 0;
+      content: '';
       position: absolute;
+      right: 0;
       width: 100%;
       height: rem(2);
-      background-color: #000;
+      border-radius: rem(2);
+      background: $whiteColor;
+      transition: all 300ms ease 0ms;
     }
-    &::before {
-      top: 0;
-    }
-    &::after {
-      bottom: 0;
-    }
-    span {
-      top: calc(50% - rem(1));
-    }
+
+    &::before { top: 0; }
+    &::after { bottom: 0; }
+    span { top: calc(50% - #{rem(1)}); }
+
     .menu-open & {
-      span {
-        width: 0;
-      }
+      span { width: 0; }
+
       &::before {
-        top: calc(50% - rem(1));
+        top: calc(50% - #{rem(1)});
         transform: rotate(-45deg);
       }
+
       &::after {
-        bottom: calc(50% - rem(1));
+        bottom: calc(50% - #{rem(1)});
         transform: rotate(45deg);
       }
     }
   }
 }
-*/

@@ -8,37 +8,46 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
-$mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: ''; // !указать здесь основное семейство шрифта
+$mainOffset: 20; // отступы безопасности для контейнера
+$mainFont: 'Inter'; // !указать здесь основное семейство шрифта
 $mainWeight: 400; // !указать здесь основное начертание шрифта
 
-$headerHeight: 100;
+$headerHeight: 80;
 $footerHeight: 100;
 
-$mainRadius: rem(10);
+$mainRadius: rem(18);
 
-$whiteColor: #fff;
-$blackColor: #131313;
-$grayColor: #6f6f6f;
-$redColor: #ff4040;
+// Dark theme palette ==========================================================
+$bgColor: #0b0b0f; // основной фон
+$bgElevated: #121218; // приподнятые поверхности
+$surfaceColor: rgba(255, 255, 255, 0.04); // glass поверхность
+$surfaceBorder: rgba(255, 255, 255, 0.08); // тонкая граница
 
-$firstAccentColor: $blackColor;
-$secondAccentColor: $redColor;
+$whiteColor: #ffffff;
+$blackColor: #0b0b0f;
+$textColor: #ECECF1; // основной текст
+$mutedColor: #8b8b9a; // приглушённый текст
+$redColor: #ff4d5e;
+
+// Neon accents ================================================================
+$accentBlue: #4f8bff;
+$accentPurple: #a855f7;
+$accentCyan: #22d3ee;
+
+$mainGradient: linear-gradient(135deg, #4f8bff 0%, #a855f7 100%);
+$softGradient: linear-gradient(135deg, rgba(79, 139, 255, 0.18) 0%, rgba(168, 85, 247, 0.18) 100%);
+
+$firstAccentColor: $accentBlue;
+$secondAccentColor: $accentPurple;
 
 $fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
-$fontColor: $blackColor; // Цвет шрифта по умолчанию
+$fontColor: $textColor; // Цвет шрифта по умолчанию
 $fontSize: rem(16); // Размер шрифта по умолчанию
 $fontWeight: $mainWeight; // Жирность шрифта по умолчанию
 
 $standartTrans: all 280ms ease-in-out 0ms;
 
-$btnBoxShadow:  0px 2px 3px rgba(#000, 10%), 
-                0px 8px 3px rgba(#000, 10%);
-
-$lightBoxShadow:  0 0 2px 0 rgba(#000, 10%), 
-                  0 0 4px 0 rgba(#000, 10%), 
-                  0 0 8px 0 rgba(#000, 10%);
-
-$hoverBoxShadow:  0 0 5px 0 rgba(#000, 10%), 
-                  0 0 10px 0 rgba(#000, 10%), 
-                  0 0 15px 0 rgba(#000, 10%);
+$btnGlow: 0 8px 30px rgba(79, 139, 255, 0.35);
+$cardShadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+$lightBoxShadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+$hoverBoxShadow: 0 20px 60px rgba(79, 139, 255, 0.25);

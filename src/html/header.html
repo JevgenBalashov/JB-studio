@@ -1,6 +1,40 @@
-<header class="header">
+<header class="header" data-lp>
   <div class="header__container">
-    <nav class="header__menu menu"></nav>
-    <!-- @@include('./iconMenu.html', {}) -->
+    <a href="#hero" class="header__logo logo">
+      <span class="logo__mark"></span>
+      <span class="logo__text">Studio<span class="text-gradient">.</span></span>
+    </a>
+
+    <nav class="header__menu menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#services" class="menu__link" data-i18n="nav.services">Services</a></li>
+        <li class="menu__item"><a href="#portfolio" class="menu__link" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li class="menu__item"><a href="#process" class="menu__link" data-i18n="nav.process">Process</a></li>
+        <li class="menu__item"><a href="#about" class="menu__link" data-i18n="nav.about">About</a></li>
+        <li class="menu__item"><a href="#contact" class="menu__link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang" data-lang-switcher>
+        <button class="lang__current" type="button" aria-haspopup="true" aria-expanded="false">
+          <span data-lang-current>EN</span>
+          <svg class="lang__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul class="lang__list">
+          <li><button class="lang__option" type="button" data-lang="en">English</button></li>
+          <li><button class="lang__option" type="button" data-lang="ru">Русский</button></li>
+          <li><button class="lang__option" type="button" data-lang="uk">Українська</button></li>
+        </ul>
+      </div>
+
+      <a href="#contact" class="btn btn--primary header__cta" data-i18n="nav.cta">Get a website</a>
+
+      <button class="icon-menu" type="button" aria-label="Menu">
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>

@@ -1,0 +1,146 @@
+.contact {
+  overflow: hidden;
+
+  // .contact__glow
+  &__glow {
+    width: rem(520);
+    height: rem(520);
+    top: rem(-160);
+    right: rem(-160);
+  }
+
+  // .contact__container
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  // .contact__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(60);
+    align-items: start;
+    padding: rem(50);
+    border-radius: rem(28);
+    background: $surfaceColor;
+    border: rem(1) solid $surfaceBorder;
+    backdrop-filter: blur(14px);
+    box-shadow: $cardShadow;
+
+    @include media(991) {
+      grid-template-columns: 1fr;
+      gap: rem(40);
+    }
+
+    @include media(575) {
+      padding: rem(28);
+    }
+  }
+
+  &__head {
+    margin: 0;
+  }
+
+  // .contact__links
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: rem(14);
+    margin-top: rem(34);
+  }
+
+  // .contact__link
+  &__link {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    padding: rem(16) rem(20);
+    border-radius: $mainRadius;
+    background: $bgElevated;
+    border: rem(1) solid $surfaceBorder;
+    transition: $standartTrans;
+
+    &:hover {
+      border-color: rgba(79, 139, 255, 0.5);
+      transform: translateX(rem(4));
+    }
+  }
+
+  &__link-label {
+    font-size: rem(13);
+    color: $mutedColor;
+  }
+
+  &__link-value {
+    font-size: rem(16);
+    font-weight: 600;
+    color: $whiteColor;
+  }
+}
+
+// Форма -----------------------------------------------------------------------
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: rem(18);
+
+  // .form__group
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+  }
+
+  // .form__label
+  &__label {
+    font-size: rem(14);
+    font-weight: 600;
+    color: $textColor;
+  }
+
+  // .form__input
+  &__input {
+    width: 100%;
+    padding: rem(14) rem(16);
+    border-radius: rem(12);
+    font-size: rem(15);
+    color: $whiteColor;
+    background: $bgElevated;
+    border: rem(1) solid $surfaceBorder;
+    transition: $standartTrans;
+
+    &::placeholder {
+      color: $mutedColor;
+    }
+
+    &:focus {
+      border-color: $accentBlue;
+      box-shadow: 0 0 0 rem(3) rgba(79, 139, 255, 0.18);
+    }
+
+    &--area {
+      resize: vertical;
+      min-height: rem(120);
+    }
+
+    &.is-invalid {
+      border-color: $redColor;
+    }
+  }
+
+  // .form__note
+  &__note {
+    min-height: rem(20);
+    font-size: rem(14);
+    color: $mutedColor;
+
+    &.is-success {
+      color: #34d399;
+    }
+
+    &.is-error {
+      color: $redColor;
+    }
+  }
+}

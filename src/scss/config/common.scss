@@ -1,1 +1,138 @@
-// Заголовки, общие БЄМ блоки и проче...
+// Заголовки, общие БЭМ блоки и кнопки ==========================================
+
+// Кнопки ----------------------------------------------------------------------
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+  padding: rem(15) rem(30);
+  border-radius: rem(999);
+  font-size: rem(15);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: $textColor;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: $standartTrans;
+
+  // .btn--primary
+  &--primary {
+    color: $whiteColor;
+    background: $mainGradient;
+    box-shadow: $btnGlow;
+
+    &:hover {
+      transform: translateY(rem(-2));
+      box-shadow: 0 12px 40px rgba(79, 139, 255, 0.5);
+    }
+  }
+
+  // .btn--ghost
+  &--ghost {
+    background: $surfaceColor;
+    border: rem(1) solid $surfaceBorder;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+      border-color: rgba(79, 139, 255, 0.5);
+      color: $whiteColor;
+      transform: translateY(rem(-2));
+    }
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
+
+// Подпись-метка над заголовком ------------------------------------------------
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(8);
+  padding: rem(7) rem(16);
+  margin-bottom: rem(20);
+  border-radius: rem(999);
+  font-size: rem(13);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $accentBlue;
+  background: $softGradient;
+  border: rem(1) solid $surfaceBorder;
+}
+
+// Шапка секции ----------------------------------------------------------------
+.section-head {
+  max-width: rem(640);
+  margin: 0 auto rem(60);
+  text-align: center;
+
+  // .section-head__title
+  &__title {
+    @include adaptiv-font(44, 30, 1);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  // .section-head__subtitle
+  &__subtitle {
+    margin-top: rem(18);
+    font-size: rem(17);
+    line-height: 1.6;
+    color: $mutedColor;
+  }
+
+  &--left {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  @include media(767) {
+    margin-bottom: rem(40);
+  }
+}
+
+// Подсветка-градиент в тексте -------------------------------------------------
+.text-gradient {
+  @include textGradient($mainGradient);
+}
+
+// Декоративное свечение фона ---------------------------------------------------
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(rem(120));
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+
+  &--blue {
+    background: $accentBlue;
+  }
+
+  &--purple {
+    background: $accentPurple;
+  }
+}
+
+// Анимация появления при скролле ----------------------------------------------
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(rem(40));
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-reveal-delay='1'] { transition-delay: 80ms; }
+[data-reveal-delay='2'] { transition-delay: 160ms; }
+[data-reveal-delay='3'] { transition-delay: 240ms; }
+[data-reveal-delay='4'] { transition-delay: 320ms; }

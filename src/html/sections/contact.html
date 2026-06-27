@@ -1,0 +1,49 @@
+<section class="contact" id="contact">
+  <span class="glow glow--blue contact__glow"></span>
+  <div class="contact__container">
+    <div class="contact__inner" data-reveal>
+      <div class="section-head section-head--left contact__head">
+        <span class="eyebrow" data-i18n="contact.eyebrow">Let's talk</span>
+        <h2 class="section-head__title" data-i18n="contact.title">Start your project today</h2>
+        <p class="section-head__subtitle" data-i18n="contact.subtitle">
+          Tell me about your idea and I'll get back to you within 24 hours.
+        </p>
+
+        <ul class="contact__links">
+          <li>
+            <a class="contact__link" href="https://t.me/username" target="_blank" rel="noopener">
+              <span class="contact__link-label" data-i18n="contact.telegram">Telegram</span>
+              <span class="contact__link-value">@username</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact__link" href="mailto:hello@studio.dev">
+              <span class="contact__link-label" data-i18n="contact.email">Email</span>
+              <span class="contact__link-value">hello@studio.dev</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form form" data-contact-form novalidate>
+        <div class="form__group">
+          <label class="form__label" for="name" data-i18n="contact.form.name">Name</label>
+          <input class="form__input" type="text" id="name" name="name" required
+                 data-i18n-placeholder="contact.form.namePh" placeholder="Your name">
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="email" data-i18n="contact.form.email">Email</label>
+          <input class="form__input" type="email" id="email" name="email" required
+                 data-i18n-placeholder="contact.form.emailPh" placeholder="you@email.com">
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="message" data-i18n="contact.form.message">Message</label>
+          <textarea class="form__input form__input--area" id="message" name="message" rows="4" required
+                    data-i18n-placeholder="contact.form.messagePh" placeholder="Tell me about your project"></textarea>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit" data-i18n="contact.form.submit">Send message</button>
+        <p class="form__note" data-form-status aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
