@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova — The operating system for modern teams</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Nova is the all-in-one platform that helps B2B teams plan, automate and ship work faster. Start free, scale without limits.">
+  <meta property="og:title" content="Nova — The operating system for modern teams">
+  <meta property="og:description" content="Plan, automate and ship work faster with one platform.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="nav" data-nav>
+    <div class="container nav__inner">
+      <a class="brand" href="#top" aria-label="Nova">
+        <span class="brand__mark">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M5 19V5l14 14V5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        Nova
+      </a>
+      <nav class="nav__menu" data-menu>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="link" href="#top">Sign in</a>
+        <a class="btn btn--primary" href="#cta">Start free</a>
+        <button class="burger" data-burger aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy" data-reveal>
+          <span class="pill"><span class="pill__dot"></span> New · Nova 3.0 is live</span>
+          <h1 class="hero__title">The operating system for <span class="grad">modern teams</span></h1>
+          <p class="hero__lead">Plan projects, automate busywork and ship faster — all in one workspace your whole company actually enjoys using.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="#cta">Start free — no card</a>
+            <a class="btn btn--ghost btn--lg" href="#how">See how it works</a>
+          </div>
+          <div class="hero__trust">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <span>4.9/5 from 2,300+ teams</span>
+          </div>
+        </div>
+
+        <div class="hero__art" data-reveal data-reveal-delay="1" aria-hidden="true">
+          <div class="window">
+            <div class="window__bar"><span></span><span></span><span></span></div>
+            <div class="window__body">
+              <div class="kpi">
+                <div class="kpi__card"><span class="kpi__label">Active</span><strong>1,284</strong><i class="up">+12%</i></div>
+                <div class="kpi__card"><span class="kpi__label">Shipped</span><strong>96%</strong><i class="up">+4%</i></div>
+                <div class="kpi__card"><span class="kpi__label">Cycle</span><strong>2.1d</strong><i class="down">-18%</i></div>
+              </div>
+              <div class="chart">
+                <span style="--h:40%"></span><span style="--h:62%"></span><span style="--h:48%"></span>
+                <span style="--h:78%"></span><span style="--h:66%"></span><span style="--h:90%"></span>
+                <span style="--h:72%"></span><span style="--h:100%"></span>
+              </div>
+              <div class="rows">
+                <div class="row"><span class="dot dot--a"></span>Design system v2<i>Done</i></div>
+                <div class="row"><span class="dot dot--b"></span>Billing automation<i>In progress</i></div>
+                <div class="row"><span class="dot dot--c"></span>Onboarding flow<i>Review</i></div>
+              </div>
+            </div>
+          </div>
+          <div class="floaty floaty--1">⚡ Automation saved 14h</div>
+          <div class="floaty floaty--2">✓ Deploy passed</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="logos">
+      <div class="container">
+        <p class="logos__label">Trusted by fast-growing companies</p>
+        <div class="logos__row">
+          <span>Lumen</span><span>Orbit</span><span>Vertex</span><span>Pulse</span><span>Cobalt</span><span>Stratos</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="head" data-reveal>
+          <span class="eyebrow">Features</span>
+          <h2>Everything your team needs to move fast</h2>
+          <p>One workspace replaces a dozen disconnected tools — so context never gets lost.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card" data-reveal>
+            <div class="ico">⚙️</div>
+            <h3>Automations</h3>
+            <p>Trigger workflows on any event. Let Nova handle the repetitive work while your team focuses on impact.</p>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="1">
+            <div class="ico">📊</div>
+            <h3>Live dashboards</h3>
+            <p>Real-time metrics on delivery, velocity and goals — always up to date, no spreadsheets required.</p>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="2">
+            <div class="ico">🔗</div>
+            <h3>100+ integrations</h3>
+            <p>Connect Slack, GitHub, Figma and the rest of your stack in a couple of clicks.</p>
+          </article>
+          <article class="card" data-reveal>
+            <div class="ico">🛡️</div>
+            <h3>Enterprise security</h3>
+            <p>SOC 2 Type II, SSO/SAML and granular permissions keep your data locked down.</p>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="1">
+            <div class="ico">🤖</div>
+            <h3>Nova AI</h3>
+            <p>Summarize threads, draft updates and surface blockers automatically with built-in AI.</p>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="2">
+            <div class="ico">📱</div>
+            <h3>Works everywhere</h3>
+            <p>Native apps for web, macOS, Windows, iOS and Android. Pick up right where you left off.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section--alt" id="how">
+      <div class="container">
+        <div class="head" data-reveal>
+          <span class="eyebrow">How it works</span>
+          <h2>Up and running in minutes</h2>
+        </div>
+        <div class="steps">
+          <div class="step" data-reveal>
+            <span class="step__no">01</span>
+            <h3>Connect your tools</h3>
+            <p>Import projects and sync your stack. Nova maps everything automatically.</p>
+          </div>
+          <div class="step" data-reveal data-reveal-delay="1">
+            <span class="step__no">02</span>
+            <h3>Automate the busywork</h3>
+            <p>Build no-code rules that move tasks, notify owners and keep status fresh.</p>
+          </div>
+          <div class="step" data-reveal data-reveal-delay="2">
+            <span class="step__no">03</span>
+            <h3>Ship with confidence</h3>
+            <p>Track delivery in live dashboards and hit every deadline as a team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrations -->
+    <section class="section" id="integrations">
+      <div class="container">
+        <div class="head" data-reveal>
+          <span class="eyebrow">Integrations</span>
+          <h2>Plays nicely with your stack</h2>
+          <p>Connect the tools your team already uses — sync happens in realtime, both ways.</p>
+        </div>
+        <div class="integrations" data-reveal>
+          <span>Slack</span><span>GitHub</span><span>Figma</span><span>Linear</span><span>Notion</span><span>Jira</span>
+          <span>Zoom</span><span>Google</span><span>Stripe</span><span>Zapier</span><span>Segment</span><span>Webhooks</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI spotlight -->
+    <section class="section section--alt" id="ai">
+      <div class="container split">
+        <div class="split__copy" data-reveal>
+          <span class="eyebrow">Nova AI</span>
+          <h2>Your team's second brain</h2>
+          <p>Nova AI reads across every project, summarizes long threads, drafts status updates and flags risks before they become blockers — so nothing slips through the cracks.</p>
+          <ul class="ticks">
+            <li>One-click summaries for any project or thread</li>
+            <li>Automatic weekly updates for stakeholders</li>
+            <li>Risk detection on at-risk deadlines</li>
+          </ul>
+          <a class="btn btn--primary" href="#cta">Try Nova AI free</a>
+        </div>
+        <div class="split__art" data-reveal data-reveal-delay="1" aria-hidden="true">
+          <div class="ai-card">
+            <div class="ai-card__head"><span class="ai-card__dot"></span> Nova AI · summary</div>
+            <p class="ai-card__line">📌 <b>3 blockers</b> detected across 2 projects this week.</p>
+            <p class="ai-card__line">✅ Design system v2 is <b>on track</b> — shipping Friday.</p>
+            <p class="ai-card__line">⚠️ Billing automation is <b>at risk</b> — owner unassigned for 2 days.</p>
+            <div class="ai-card__prompt"><span>Ask Nova anything…</span><i>⌘K</i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use cases -->
+    <section class="section" id="usecases">
+      <div class="container">
+        <div class="head" data-reveal>
+          <span class="eyebrow">Use cases</span>
+          <h2>One platform, every team</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card card--use" data-reveal><div class="ico">💻</div><h3>Engineering</h3><p>Sprints, roadmaps and incident tracking that sync straight from GitHub.</p></article>
+          <article class="card card--use" data-reveal data-reveal-delay="1"><div class="ico">📣</div><h3>Marketing</h3><p>Campaign calendars, content pipelines and launch checklists in one place.</p></article>
+          <article class="card card--use" data-reveal data-reveal-delay="2"><div class="ico">⚙️</div><h3>Operations</h3><p>Automate requests, approvals and onboarding with no-code workflows.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="container stats__row">
+        <div class="stat" data-reveal><strong>2,300+</strong><span>teams onboarded</span></div>
+        <div class="stat" data-reveal data-reveal-delay="1"><strong>40%</strong><span>faster delivery</span></div>
+        <div class="stat" data-reveal data-reveal-delay="2"><strong>14h</strong><span>saved per week</span></div>
+        <div class="stat" data-reveal data-reveal-delay="3"><strong>99.99%</strong><span>uptime SLA</span></div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section">
+      <div class="container">
+        <figure class="quote" data-reveal>
+          <blockquote>"Nova replaced four tools and cut our release cycle in half. It's the first platform the entire company actually wants to use."</blockquote>
+          <figcaption>
+            <span class="avatar">EM</span>
+            <span><strong>Elena Marsh</strong><i>VP Engineering, Vertex</i></span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <div class="head" data-reveal>
+          <span class="eyebrow">Pricing</span>
+          <h2>Simple plans that scale with you</h2>
+          <p>Start free. Upgrade when your team grows. Cancel anytime.</p>
+        </div>
+        <div class="grid grid--3 plans">
+          <article class="plan" data-reveal>
+            <h3>Starter</h3>
+            <div class="plan__price">$0<span>/mo</span></div>
+            <p class="plan__desc">For small teams getting started.</p>
+            <ul>
+              <li>Up to 10 members</li>
+              <li>Unlimited projects</li>
+              <li>Basic automations</li>
+              <li>Community support</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#cta">Get started</a>
+          </article>
+          <article class="plan plan--featured" data-reveal data-reveal-delay="1">
+            <span class="plan__badge">Most popular</span>
+            <h3>Growth</h3>
+            <div class="plan__price">$12<span>/user/mo</span></div>
+            <p class="plan__desc">For scaling companies that ship fast.</p>
+            <ul>
+              <li>Everything in Starter</li>
+              <li>Advanced automations</li>
+              <li>Live dashboards & goals</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="#cta">Start free trial</a>
+          </article>
+          <article class="plan" data-reveal data-reveal-delay="2">
+            <h3>Enterprise</h3>
+            <div class="plan__price">Custom</div>
+            <p class="plan__desc">For organizations with advanced needs.</p>
+            <ul>
+              <li>SSO/SAML & SCIM</li>
+              <li>SOC 2, custom SLA</li>
+              <li>Dedicated success manager</li>
+              <li>Onboarding & training</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#cta">Contact sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="head" data-reveal>
+          <span class="eyebrow">FAQ</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq" data-faq>
+          <details class="faq__item">
+            <summary>Is there really a free plan?</summary>
+            <p>Yes. The Starter plan is free forever for up to 10 members, with no credit card required.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Can I migrate from my current tools?</summary>
+            <p>Nova imports from Jira, Asana, Trello and CSV in a few clicks, and our team can help with larger migrations.</p>
+          </details>
+          <details class="faq__item">
+            <summary>How secure is my data?</summary>
+            <p>We're SOC 2 Type II compliant with encryption at rest and in transit, SSO/SAML and granular role-based permissions.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Do you offer discounts for startups?</summary>
+            <p>Eligible startups and nonprofits get 50% off the Growth plan for the first year. Reach out to sales.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="cta">
+      <div class="container cta__inner" data-reveal>
+        <h2>Ready to ship faster?</h2>
+        <p>Join 2,300+ teams already building with Nova. Free to start, easy to scale.</p>
+        <form class="cta__form" onsubmit="return false">
+          <input type="email" placeholder="you@company.com" aria-label="Work email" required>
+          <button class="btn btn--primary" type="submit">Start free</button>
+        </form>
+        <span class="cta__note">No credit card · 14-day Growth trial included</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="brand" href="#top">
+          <span class="brand__mark">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M5 19V5l14 14V5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          Nova
+        </a>
+        <p>The operating system for modern teams.</p>
+      </div>
+      <nav class="footer__cols">
+        <div><h4>Product</h4><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#how">How it works</a></div>
+        <div><h4>Company</h4><a href="#top">About</a><a href="#top">Careers</a><a href="#top">Blog</a></div>
+        <div><h4>Legal</h4><a href="#top">Privacy</a><a href="#top">Terms</a><a href="#top">Security</a></div>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span data-year>2026</span> Nova Inc. All rights reserved.</span>
+      <a class="link" href="../../">← Back to portfolio</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse — Realtime analytics for product teams</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Pulse turns your product data into realtime dashboards, alerts and insights — so you always know what's happening as it happens.">
+  <meta property="og:title" content="Pulse — Realtime analytics for product teams">
+  <meta property="og:description" content="Realtime dashboards, alerts and insights for modern product teams.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <header class="nav" data-nav>
+    <div class="container nav__inner">
+      <a class="brand" href="#top"><span class="brand__pulse"></span> Pulse</a>
+      <nav class="nav__menu" data-menu>
+        <a href="#features">Platform</a>
+        <a href="#dash">Dashboards</a>
+        <a href="#integrations">Integrations</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="link" href="#top">Docs</a>
+        <a class="btn btn--primary" href="#cta">Get started</a>
+        <button class="burger" data-burger aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="pill" data-reveal><span class="live"></span> Live · 8.2M events/min processed</span>
+        <h1 class="hero__title" data-reveal data-reveal-delay="1">Know what's happening <span class="grad">the moment it happens</span></h1>
+        <p class="hero__lead" data-reveal data-reveal-delay="2">Pulse streams your product data into realtime dashboards, anomaly alerts and shareable insights — no SQL, no waiting for nightly jobs.</p>
+        <div class="hero__cta" data-reveal data-reveal-delay="3">
+          <a class="btn btn--primary btn--lg" href="#cta">Start free</a>
+          <a class="btn btn--ghost btn--lg" href="#dash">Live demo →</a>
+        </div>
+
+        <div class="dash" id="dash" data-reveal data-reveal-delay="3" aria-hidden="true">
+          <div class="dash__top">
+            <div class="metric"><span>Active users</span><strong>24,918</strong><i class="up">▲ 8.4%</i></div>
+            <div class="metric"><span>Conversion</span><strong>3.91%</strong><i class="up">▲ 0.6%</i></div>
+            <div class="metric"><span>Errors</span><strong>0.02%</strong><i class="down">▼ 31%</i></div>
+            <div class="metric"><span>Latency</span><strong>121ms</strong><i class="down">▼ 12%</i></div>
+          </div>
+          <div class="dash__main">
+            <div class="panel panel--chart">
+              <div class="panel__head"><span>Events · realtime</span><em class="live-tag"><span class="live"></span> live</em></div>
+              <svg class="line" viewBox="0 0 320 120" preserveAspectRatio="none">
+                <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22d3ee" stop-opacity="0.4"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient></defs>
+                <polyline class="line__fill" points="0,90 40,70 80,82 120,50 160,64 200,34 240,48 280,22 320,40 320,120 0,120" fill="url(#g)"/>
+                <polyline class="line__stroke" points="0,90 40,70 80,82 120,50 160,64 200,34 240,48 280,22 320,40" fill="none"/>
+              </svg>
+            </div>
+            <div class="panel panel--bars">
+              <div class="panel__head"><span>Top sources</span></div>
+              <ul class="bars">
+                <li><span>Direct</span><i style="--w:82%"></i><b>82%</b></li>
+                <li><span>Search</span><i style="--w:61%"></i><b>61%</b></li>
+                <li><span>Social</span><i style="--w:44%"></i><b>44%</b></li>
+                <li><span>Email</span><i style="--w:29%"></i><b>29%</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logos"><div class="container"><p>Powering data teams at</p><div class="logos__row"><span>Helio</span><span>Quanta</span><span>Nimbus</span><span>Forge</span><span>Atlas</span></div></div></section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="head" data-reveal>
+          <span class="eyebrow">Platform</span>
+          <h2>Built for realtime, end to end</h2>
+          <p>From event ingestion to alerting, Pulse handles the entire pipeline at sub-second latency.</p>
+        </div>
+        <div class="grid">
+          <article class="card" data-reveal><div class="ico">⚡</div><h3>Streaming ingestion</h3><p>Ingest millions of events per minute via SDKs, webhooks or our HTTP API.</p></article>
+          <article class="card" data-reveal data-reveal-delay="1"><div class="ico">📈</div><h3>Live dashboards</h3><p>Drag-and-drop charts that update in realtime — no refresh, no SQL required.</p></article>
+          <article class="card" data-reveal data-reveal-delay="2"><div class="ico">🔔</div><h3>Anomaly alerts</h3><p>ML-powered detection pings Slack or PagerDuty the second metrics drift.</p></article>
+          <article class="card" data-reveal><div class="ico">🧩</div><h3>Funnels & cohorts</h3><p>Build funnels, retention and cohort analyses with a couple of clicks.</p></article>
+          <article class="card" data-reveal data-reveal-delay="1"><div class="ico">🔐</div><h3>Governance</h3><p>RBAC, audit logs and PII controls keep your data compliant by default.</p></article>
+          <article class="card" data-reveal data-reveal-delay="2"><div class="ico">🔌</div><h3>Warehouse sync</h3><p>Two-way sync with Snowflake, BigQuery and Postgres in realtime.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="integrations">
+      <div class="container">
+        <div class="head" data-reveal><span class="eyebrow">Integrations</span><h2>Connects to your entire stack</h2></div>
+        <div class="chips" data-reveal>
+          <span>Segment</span><span>Snowflake</span><span>BigQuery</span><span>Postgres</span><span>Slack</span><span>PagerDuty</span><span>Stripe</span><span>Webhooks</span><span>Kafka</span><span>Amplitude</span><span>dbt</span><span>Looker</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SDK / install -->
+    <section class="section" id="developers">
+      <div class="container split">
+        <div class="split__copy" data-reveal>
+          <span class="eyebrow">Developers</span>
+          <h2>Live in three lines of code</h2>
+          <p>Drop in the SDK, send your first event and watch it appear on your dashboard in realtime. No pipelines to maintain, no warehouse required.</p>
+          <ul class="ticks"><li>SDKs for JS, Python, Go &amp; more</li><li>Typed events with autocomplete</li><li>99.99% ingestion uptime</li></ul>
+          <a class="btn btn--ghost" href="#cta">Read the docs →</a>
+        </div>
+        <div class="split__art" data-reveal data-reveal-delay="1" aria-hidden="true">
+          <div class="code">
+            <div class="code__bar"><span></span><span></span><span></span><em>app.js</em></div>
+            <pre><code><span class="c-k">import</span> { Pulse } <span class="c-k">from</span> <span class="c-s">'@pulse/sdk'</span>
+
+<span class="c-c">// initialise once</span>
+<span class="c-k">const</span> pulse = <span class="c-f">new</span> <span class="c-t">Pulse</span>(<span class="c-s">'pk_live_8f2c…'</span>)
+
+<span class="c-c">// track anything, in realtime</span>
+pulse.<span class="c-f">track</span>(<span class="c-s">'checkout_completed'</span>, {
+  amount: <span class="c-n">129.0</span>,
+  plan: <span class="c-s">'growth'</span>,
+})</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security band -->
+    <section class="section section--alt" id="security">
+      <div class="container">
+        <div class="head" data-reveal><span class="eyebrow">Security &amp; compliance</span><h2>Enterprise-grade by default</h2></div>
+        <div class="grid">
+          <article class="card" data-reveal><div class="ico">🛡️</div><h3>SOC 2 Type II</h3><p>Independently audited controls across security, availability and confidentiality.</p></article>
+          <article class="card" data-reveal data-reveal-delay="1"><div class="ico">🔑</div><h3>SSO &amp; RBAC</h3><p>SAML/SCIM single sign-on and granular role-based access for every workspace.</p></article>
+          <article class="card" data-reveal data-reveal-delay="2"><div class="ico">🌐</div><h3>Data residency</h3><p>Choose EU or US regions and keep PII masked end-to-end.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section">
+      <div class="container">
+        <figure class="quote" data-reveal>
+          <blockquote>"We replaced a fragile nightly pipeline with Pulse and now the whole company watches the same realtime numbers. Game changer."</blockquote>
+          <figcaption><span class="avatar">RK</span><span><strong>Ravi Kapoor</strong><i>Head of Data, Nimbus</i></span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="stats"><div class="container stats__row">
+      <div class="stat" data-reveal><strong>&lt;500ms</strong><span>end-to-end latency</span></div>
+      <div class="stat" data-reveal data-reveal-delay="1"><strong>8.2M</strong><span>events / minute</span></div>
+      <div class="stat" data-reveal data-reveal-delay="2"><strong>99.99%</strong><span>uptime</span></div>
+      <div class="stat" data-reveal data-reveal-delay="3"><strong>1,200+</strong><span>data teams</span></div>
+    </div></section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="head" data-reveal><span class="eyebrow">Pricing</span><h2>Usage-based, predictable</h2><p>Only pay for the events you send. Start free up to 1M events/month.</p></div>
+        <div class="grid grid--3 plans">
+          <article class="plan" data-reveal><h3>Free</h3><div class="plan__price">$0</div><p>1M events / mo</p><ul><li>3 dashboards</li><li>7-day retention</li><li>Community support</li></ul><a class="btn btn--ghost btn--block" href="#cta">Start free</a></article>
+          <article class="plan plan--featured" data-reveal data-reveal-delay="1"><span class="plan__badge">Popular</span><h3>Team</h3><div class="plan__price">$99<span>/mo</span></div><p>50M events / mo</p><ul><li>Unlimited dashboards</li><li>90-day retention</li><li>Anomaly alerts</li><li>Priority support</li></ul><a class="btn btn--primary btn--block" href="#cta">Start trial</a></article>
+          <article class="plan" data-reveal data-reveal-delay="2"><h3>Scale</h3><div class="plan__price">Custom</div><p>Unlimited events</p><ul><li>SSO & RBAC</li><li>Custom retention</li><li>Dedicated support</li><li>99.99% SLA</li></ul><a class="btn btn--ghost btn--block" href="#cta">Contact us</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="cta">
+      <div class="container cta__inner" data-reveal>
+        <h2>See your data come alive</h2>
+        <p>Set up Pulse in under 5 minutes. Free up to 1M events per month.</p>
+        <form class="cta__form" onsubmit="return false">
+          <input type="email" placeholder="you@company.com" aria-label="Email" required>
+          <button class="btn btn--primary" type="submit">Start free</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div><a class="brand" href="#top"><span class="brand__pulse"></span> Pulse</a><p>Realtime analytics for product teams.</p></div>
+      <nav class="footer__cols">
+        <div><h4>Product</h4><a href="#features">Platform</a><a href="#pricing">Pricing</a><a href="#integrations">Integrations</a></div>
+        <div><h4>Developers</h4><a href="#top">Docs</a><a href="#top">API</a><a href="#top">Status</a></div>
+        <div><h4>Company</h4><a href="#top">About</a><a href="#top">Security</a><a href="#top">Careers</a></div>
+      </nav>
+    </div>
+    <div class="container footer__bottom"><span>© <span data-year>2026</span> Pulse Analytics</span><a class="link" href="../../">← Back to portfolio</a></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura — Modern fashion, fast checkout</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Aura is a contemporary fashion store with curated essentials, free shipping and a one-tap checkout.">
+  <meta property="og:title" content="Aura — Modern fashion, fast checkout">
+  <meta property="og:description" content="Curated essentials. Free shipping. One-tap checkout.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <div class="announce">Free shipping over $75 · New season just dropped ✦</div>
+
+  <header class="nav" data-nav>
+    <div class="container nav__inner">
+      <button class="burger" data-burger aria-label="Menu"><span></span><span></span><span></span></button>
+      <a class="brand" href="#top">AURA</a>
+      <nav class="nav__menu" data-menu>
+        <a href="#new">New in</a>
+        <a href="#categories">Shop</a>
+        <a href="#editorial">Editorial</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="icon-link" href="#top" aria-label="Search">⌕</a>
+        <a class="icon-link" href="#top" aria-label="Account">♡</a>
+        <a class="icon-link cart" href="#top" aria-label="Cart">Bag <span>2</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy" data-reveal>
+          <span class="eyebrow">Autumn / Winter '26</span>
+          <h1 class="display">Effortless style,<br>delivered fast.</h1>
+          <p class="lead">Curated wardrobe essentials made from responsibly sourced materials — with a checkout that takes seconds, not minutes.</p>
+          <div class="hero__cta">
+            <a class="btn btn--dark" href="#categories">Shop the collection</a>
+            <a class="btn btn--line" href="#editorial">Lookbook</a>
+          </div>
+          <div class="hero__meta">
+            <span><strong>Free</strong> returns</span>
+            <span><strong>30k+</strong> happy customers</span>
+            <span><strong>4.9★</strong> rated</span>
+          </div>
+        </div>
+        <div class="hero__art" data-reveal data-reveal-delay="1" aria-hidden="true">
+          <div class="ph ph--a"><span class="tag">New</span></div>
+          <div class="ph ph--b"><span class="tag">Bestseller</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee"><div class="marquee__track">
+      <span>Organic cotton</span>✦<span>Carbon-neutral shipping</span>✦<span>Ethically made</span>✦<span>One-tap checkout</span>✦<span>Free 30-day returns</span>✦<span>Organic cotton</span>✦<span>Carbon-neutral shipping</span>✦<span>Ethically made</span>✦<span>One-tap checkout</span>✦<span>Free 30-day returns</span>✦
+    </div></div>
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="head" data-reveal>
+          <h2 class="serif">Shop by category</h2>
+          <a class="link" href="#new">View all →</a>
+        </div>
+        <div class="cats">
+          <a class="cat cat--1" href="#new" data-reveal><span>Outerwear</span></a>
+          <a class="cat cat--2" href="#new" data-reveal data-reveal-delay="1"><span>Knitwear</span></a>
+          <a class="cat cat--3" href="#new" data-reveal data-reveal-delay="2"><span>Accessories</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- New in / products -->
+    <section class="section section--soft" id="new">
+      <div class="container">
+        <div class="head" data-reveal>
+          <h2 class="serif">New this week</h2>
+          <a class="link" href="#top">All new in →</a>
+        </div>
+        <div class="products">
+          <article class="product" data-reveal>
+            <div class="product__img product__img--1"><button class="product__add">Quick add +</button><span class="badge">−20%</span></div>
+            <h3>Wool Overcoat</h3>
+            <p class="product__price"><b>$148</b> <s>$185</s></p>
+          </article>
+          <article class="product" data-reveal data-reveal-delay="1">
+            <div class="product__img product__img--2"><button class="product__add">Quick add +</button></div>
+            <h3>Cashmere Sweater</h3>
+            <p class="product__price"><b>$92</b></p>
+          </article>
+          <article class="product" data-reveal data-reveal-delay="2">
+            <div class="product__img product__img--3"><button class="product__add">Quick add +</button><span class="badge">New</span></div>
+            <h3>Leather Tote</h3>
+            <p class="product__price"><b>$120</b></p>
+          </article>
+          <article class="product" data-reveal data-reveal-delay="3">
+            <div class="product__img product__img--4"><button class="product__add">Quick add +</button></div>
+            <h3>Tailored Trousers</h3>
+            <p class="product__price"><b>$78</b></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo banner -->
+    <section class="promo">
+      <div class="container promo__inner" data-reveal>
+        <div class="promo__copy">
+          <span class="eyebrow">Limited drop</span>
+          <h2 class="serif">The Winter Capsule</h2>
+          <p>12 timeless pieces, made in limited runs. Once they're gone, they're gone.</p>
+          <a class="btn btn--dark" href="#new">Shop the capsule</a>
+        </div>
+        <div class="promo__count" data-reveal data-reveal-delay="1">
+          <div><strong>12</strong><span>pieces</span></div>
+          <div><strong>340</strong><span>made</span></div>
+          <div><strong>72%</strong><span>sold</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section values">
+      <div class="container values__grid">
+        <div class="value" data-reveal><span class="value__ic">🚚</span><h3>Free fast shipping</h3><p>2–3 day delivery, carbon-neutral, free over $75.</p></div>
+        <div class="value" data-reveal data-reveal-delay="1"><span class="value__ic">↩️</span><h3>30-day returns</h3><p>Changed your mind? Return anything, no questions asked.</p></div>
+        <div class="value" data-reveal data-reveal-delay="2"><span class="value__ic">🌿</span><h3>Responsibly made</h3><p>Organic and recycled fabrics in family-owned ateliers.</p></div>
+        <div class="value" data-reveal data-reveal-delay="3"><span class="value__ic">🔒</span><h3>Secure checkout</h3><p>Apple Pay, Google Pay and one-tap card payments.</p></div>
+      </div>
+    </section>
+
+    <!-- Editorial -->
+    <section class="section editorial" id="editorial">
+      <div class="container editorial__grid">
+        <div class="editorial__media" data-reveal aria-hidden="true"></div>
+        <div class="editorial__copy" data-reveal data-reveal-delay="1">
+          <span class="eyebrow">The edit</span>
+          <h2 class="serif">Designed to last, made to be worn.</h2>
+          <p>Every Aura piece is built around timeless silhouettes and durable, responsibly sourced fabrics — so your wardrobe works season after season.</p>
+          <ul class="ticks">
+            <li>Responsibly sourced materials</li>
+            <li>Carbon-neutral delivery</li>
+            <li>Made in family-owned ateliers</li>
+          </ul>
+          <a class="btn btn--dark" href="#new">Explore the edit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section section--soft" id="reviews">
+      <div class="container">
+        <div class="head head--center" data-reveal>
+          <h2 class="serif">Loved by 30,000+ customers</h2>
+        </div>
+        <div class="reviews">
+          <figure class="review" data-reveal>
+            <div class="stars">★★★★★</div>
+            <blockquote>"The quality is unreal for the price, and checkout literally took one tap with Apple Pay."</blockquote>
+            <figcaption>— Mia R.</figcaption>
+          </figure>
+          <figure class="review" data-reveal data-reveal-delay="1">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Finally a brand that ships fast and looks this good. The overcoat is my new favourite."</blockquote>
+            <figcaption>— Jonas K.</figcaption>
+          </figure>
+          <figure class="review" data-reveal data-reveal-delay="2">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Sustainable, beautifully made and effortless to order. Aura nailed it."</blockquote>
+            <figcaption>— Priya S.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram feed -->
+    <section class="section section--soft" id="insta">
+      <div class="container">
+        <div class="head head--center" data-reveal>
+          <h2 class="serif">@aura.studio</h2>
+          <p style="color:var(--muted);margin-top:8px">Tag us for a chance to be featured</p>
+        </div>
+        <div class="insta">
+          <a class="insta__item insta__item--1" href="#top" data-reveal></a>
+          <a class="insta__item insta__item--2" href="#top" data-reveal data-reveal-delay="1"></a>
+          <a class="insta__item insta__item--3" href="#top" data-reveal data-reveal-delay="2"></a>
+          <a class="insta__item insta__item--4" href="#top" data-reveal data-reveal-delay="3"></a>
+          <a class="insta__item insta__item--5" href="#top" data-reveal></a>
+          <a class="insta__item insta__item--6" href="#top" data-reveal data-reveal-delay="1"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="news">
+      <div class="container news__inner" data-reveal>
+        <h2 class="serif">Get 10% off your first order</h2>
+        <p>Join the list for early access to drops, private sales and styling notes.</p>
+        <form class="news__form" onsubmit="return false">
+          <input type="email" placeholder="Your email" aria-label="Email" required>
+          <button class="btn btn--dark" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div><a class="brand" href="#top">AURA</a><p>Modern fashion, made responsibly.</p></div>
+      <nav class="footer__cols">
+        <div><h4>Shop</h4><a href="#new">New in</a><a href="#categories">Outerwear</a><a href="#categories">Accessories</a></div>
+        <div><h4>Help</h4><a href="#top">Shipping</a><a href="#top">Returns</a><a href="#top">Size guide</a></div>
+        <div><h4>About</h4><a href="#top">Sustainability</a><a href="#top">Stores</a><a href="#top">Careers</a></div>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span data-year>2026</span> Aura Studio</span>
+      <a class="link" href="../../">← Back to portfolio</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
